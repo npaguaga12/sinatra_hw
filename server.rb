@@ -1,9 +1,5 @@
 require 'sinatra'
 
 get '/' do
-  "Hello world"
-end
-
-get '/sinatra' do
-  "Fly me to the moon, let me play among the stars!"
+  File.new('public/hello.txt').readlines
 end
